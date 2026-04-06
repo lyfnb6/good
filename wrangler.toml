@@ -1,7 +1,3 @@
-name = "good"
-main = "src/worker.py"
+name = "my-app"
+main = "worker.js"  # 改成 worker.js，不是 src/worker.py
 compatibility_date = "2025-04-10"
-compatibility_flags = ["python_workers", "python_workers_20250116"]
-
-[vars]
-DEBUG = "false"
