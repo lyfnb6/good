@@ -36,9 +36,11 @@ def echo():
 
 async def on_fetch(request, env):
     """Cloudflare Worker 入口函数"""
-    # 注入环境变量
-    for key, value in env.__dict__.items():
-        os.environ[key] = str(value)
+    # 注意：不要使用 env.__dict__，Cloudflare Workers 不支持
+    
+    # 如果需要读取环境变量，这样写：
+    # debug = env.DEBUG if hasattr(env, 'DEBUG') else 'false'
+    # secret_key = env.SECRET_KEY if hasattr(env, 'SECRET_KEY') else None
     
     # 构建 WSGI 环境
     environ = {
