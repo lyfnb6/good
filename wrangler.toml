@@ -1,4 +1,4 @@
-name = "flask-on-workers"
+name = "good"
 main = "src/worker.py"
 compatibility_date = "2025-04-10"
 compatibility_flags = ["python_workers", "python_workers_20250116"]
