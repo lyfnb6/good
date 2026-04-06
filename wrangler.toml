@@ -1,0 +1,13 @@
+name = "flask-on-workers"
+main = "src/worker.py"
+compatibility_date = "2025-04-10"
+compatibility_flags = ["python_workers", "python_workers_20250116"]
+
+[vars]
+SECRET_KEY = "your-production-secret-key-change-this"
+DEBUG = "false"
+
+[[rules]]
+globs = ["vendor/**/*.py", "vendor/**/*.pyc", "vendor/**/*.so"]
+type = "Data"
+fallthrough = true
